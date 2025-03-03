@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Form UI</title>
+    <link
+      rel="stylesheet"
+      href="vendors/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="vendors/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="vendors/select2/dist/css/select2.min.css" />
+
+  </head> 
+  <body>
+    <div class="container mt-5">
+      <div class="filter-container rounded relative bg-light" style="padding: 20px;">
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn-close" aria-label="Close">Close</button>
+        </div>
+        
+        <h5>Created At</h5>
+        <div class="btn-group mb-5" role="group">
+          <button class="btn btn-light border border-2 border-secondary">
+            Today
+          </button>
+          <button class="btn btn-light border border-2 border-secondary">
+            This Week
+          </button>
+          <button class="btn btn-light border border-2 border-secondary">
+            This Month
+          </button>
+          <input type="date" class="ml-3" placeholder="From" />
+          <input type="date" class="ml-3" placeholder="To" />
+        </div>
+
+        <div class="d-flex justify-content-between mb-5">
+          <div>
+            <h5 class="mt-3">Opted In</h5>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="optedIn"
+                checked
+              />
+              <label class="form-check-label">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="optedIn" />
+              <label class="form-check-label">No</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="optedIn" />
+              <label class="form-check-label">All</label>
+            </div>
+          </div>
+          <div>
+            <h5 class="mt-3">Incoming Blocked</h5>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="incomingBlocked"
+              />
+              <label class="form-check-label">Yes</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="incomingBlocked"
+                checked
+              />
+              <label class="form-check-label">No</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="incomingBlocked"
+              />
+              <label class="form-check-label">All</label>
+            </div>
+          </div>
+          <div>
+            <h5 class="mt-3">Read Status</h5>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="readStatus" />
+              <label class="form-check-label">Read</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="readStatus" />
+              <label class="form-check-label">Unread</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="readStatus"
+                checked
+              />
+              <label class="form-check-label">All</label>
+            </div>
+          </div>
+        </div>
+
+        <h5 class="mt-3">Filter By</h5>
+        <div class="form-row">
+          <div class="col-md-4">
+            <select class="form-control" style="background-color: #b0b0b0; color: white;">
+              <option>Select Attribute</option>
+            </select>            
+          </div>
+          <div class="col-md-2">
+            <select class="form-control">
+              <option>is</option>
+            </select>
+          </div>
+          <div class="col-md-4">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Attribute Value"
+            />
+          </div>
+          <div class="col-md-2">
+            <button class="btn btn-light">+</button>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <button class="btn btn-success">Apply</button>
+          <button class="btn btn-light">Clear All</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendors/select2/dist/js/select2.min.js"></script>
+  </body>
+</html>
