@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat UI</title>
+    <link
+      rel="stylesheet"
+      href="vendors/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="vendors/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="vendors/select2/dist/css/select2.min.css" />
+    <style>
+      /* Custom Styles */
+      body {
+        font-family: sans-serif;
+      }
+      .chat-section {
+        height: 400px; /* Adjust as needed */
+        overflow-y: auto;
+      }
+      .message-box {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid min-vh-100">
+      <div class="row">
+        <div class="col-md-3 min-vh-100  border-end d-flex flex-column align-items-center  text-center">
+            <div class="container-fluid border p-3 border-2 bg-success">
+                <h6 class="">Intervened By Me (0)</h6>
+            </div>
+            <div class="container-fluid mt-5">
+                <img src="build/images/victor-chat.jpg" alt="Chat Placeholder" class="img-fluid rounded-circle mt-5" style="max-width: 80px;">
+                <p class="mt-5">Seems clear !</p>
+            </div>
+        </div>
+        
+        <div class="col-md-6 bg-warning min-vh-100">
+            <div class="d-flex flex-column align-items-center">
+                <small class="text-muted">Utility Conversation Started</small>
+            </div>
+            
+            <div class="d-flex align-items-start mt-3">
+                <div class="rounded-circle bg-warning text-dark d-flex justify-content-center align-items-center" 
+                     style="width: 30px; height: 30px; font-weight: bold;">A</div>
+                <div class="bg-success text-white px-3 py-2 rounded" style="margin-left: 8px;">hii</div>
+            </div>
+            
+            
+            
+            
+            <div class="d-flex justify-content-end mt-3">
+                <div class="text-end">
+                    <div class="rounded-circle bg-dark text-white d-flex justify-content-center align-items-center" style="width: 30px; height: 30px; font-weight: bold;">A</div>
+                </div>
+                <div class="ms-2 p-3 border rounded bg-light" style="max-width: 60%;">
+                    <strong>MCUBE Communications</strong>
+                    <p class="mb-1" style="font-size: 14px;">Thanks for contacting MCUBE. Our agents are busy right now, you will receive a callback shortly. Please feel free to write us at 'support@mcube.com' or you may reach us on 8088712345 for any further assistance.</p>
+                    <small class="text-muted">MCUBE Support Team</small>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div class="col-md-3 min-vh-100">
+            <!-- Tags Section -->
+            <div class="border p-3 rounded">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0">Tags</h6>
+                    <button class="btn btn-sm p-0">&#9660;</button>
+                </div>
+                <div class="input-group mt-2">
+                    <select class="form-select" disabled>
+                        <option selected>Select & add tag</option>
+                    </select>
+                    <button class="btn btn-outline-secondary">+ Add</button>
+                </div>
+                <a href="#" class="d-block mt-2 text-decoration-none text-success">Create & Add Tag</a>
+            </div>
+            
+            <!-- Customer Journey Section -->
+            <div class="border p-3 rounded mt-3">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h6 class="mb-0 text-muted">Customer Journey</h6>
+                    <button class="btn btn-sm p-0">&#9660;</button>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <span class="bg-success rounded-circle d-inline-block me-3" style="width: 10px; height: 10px;"></span>
+                    <div style="margin-left: 5px;">
+                        <strong>User created</strong>
+                        <p class="mb-0 text-muted" style="font-size: 12px; margin-top: 4px;">04:14 PM, 01 Mar 2025</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Block Incoming Messages -->
+            <div class="text-center mt-3">
+                <button class="btn text-danger border-0">
+                    &#128711; Block Incoming Messages
+                </button>
+            </div>
+        </div>
+        
+        <!--  -->
+      </div>
+    </div>
+
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendors/select2/dist/js/select2.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".select2").select2();
+      });
+    </script>
+  </body>
+</html>
